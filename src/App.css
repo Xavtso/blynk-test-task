@@ -1,38 +1,326 @@
 .App {
-  text-align: center;
+  display: flex;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.imageContainer{
+  background-image: url(./assets/images/photo_2022-12-12_23-40-15.jpg);
+  height: 13rem;
+  width: 13rem;
+  background-size: cover;
+  background-position: bottom;
+  border-radius:50% ;
+  -webkit-border-radius:50% ;
+  -moz-border-radius:50% ;
+  -ms-border-radius:50% ;
+  -o-border-radius:50% ;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
+.sidebar {
   background-color: #282c34;
-  min-height: 100vh;
+  width: 20%;
+  height: 100vh;
+  color: aliceblue;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.items-container {
+  /* margin-inline: auto; */
+  width: 40rem;
+  height: 30rem;
+  background-color: #ede9e9;
+  box-shadow: #282c34 0px 0px 10px 1px;
+  border-radius: 1.5rem;
+  text-align: center;
+  padding: 0;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+  overflow: auto;
+  
+}
+
+.textForm {
+  border-bottom: #0088ff 3px solid;
+  text-align: center;
+  margin-top: 0.1rem;
+  
+  padding: 0.5rem;
+  display: flex;
+  position: fixed;
+  width: 39rem;
+  background-color: #ede9e9;
+  border-radius: 1.5rem 1.5rem 0rem 0rem;
+  -webkit-border-radius: 1.5rem 1.5rem 0rem 0rem;
+  -moz-border-radius: 1.5rem 1.5rem 0rem 0rem;
+  -ms-border-radius: 1.5rem 1.5rem 0rem 0rem;
+  -o-border-radius: 1.5rem 1.5rem 0rem 0rem;
+}
+
+.form-btn {
+  margin-left: auto;
+  border-radius: 1rem;
+  width: 8rem;
+  font-size: 16px;
+  font-weight: 600;
+  color: aliceblue;
+  border: none;
+  box-shadow: #282c34 0px 0px 2px 1px;
+  background-color: #0088ff;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.nameInput {
+  width: 70%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  box-shadow: #282c34 0px 0px 2px 0.1px;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  font-size: 18px;
+  color: #0088ff;
+  letter-spacing: 2px;
+}
+
+.posts-list {
+  padding: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+  margin-inline: auto;
+  margin-top: 4rem;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.post-item {
+  width: 90%;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 2px 1px #282c34;
+  margin-inline: auto;
+  margin: 0;
+  display: flex;
+  padding-inline: 1rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.active{
+  border-left:7px solid #0088ff ;
+}
+
+
+.post-text{
+  color: #0088ff;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.commentsAmount {
+  margin-left: auto;
+  margin-right: 2rem;
+  background-color: #0088ff;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+  font-size: 18px;
+  font-weight: 600;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.delete-btn{
+  border-radius: 1rem;
+  width: 5rem;
+  border: #f81a1a 2px solid;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f81a1a;
+  background-color: rgb(255, 255, 255);
+  padding: 0.2rem 0rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.delete-btn:hover{
+  color: #fff;
+  background-color: #f81a1a;
+}
+
+button{
+  cursor: pointer;
+}
+
+.main{
+  width: 80%;
+  border: 1px solid;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background-color: #929caf;
+}
+.commentsContainer{
+  border: 1px solid;
+  background-color: #ede9e9;
+  height: 15rem;
+  border-radius: 1.5rem;
+  width: 25rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+  padding: 0.5rem;
+  min-height: 15rem;
+  height: fit-content;
+  max-height:30rem ;
+  overflow: auto;
+}
+
+.commentForm{
+  /* border: 1px solid; */
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  
+}
+
+.commInput{
+  width: 50%;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  box-shadow: #282c34 0px 0px 2px 0.1px;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+
+.colorInput{
+height: 3rem;
+}
+
+.comment-btn{
+  /*margin-left: auto;
+  */border-radius: 1rem;
+  width: 6rem;
+  padding: 0.2rem 0.3rem;
+  font-size: 16px;
+  font-weight: 600;
+  color: aliceblue;
+  border: none;
+  box-shadow: #282c34 0px 0px 2px 1px;
+  background-color: #0088ff;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.commentList{
+/* border: 1px solid; */
+padding: 0.2rem;
+margin-inline:auto ;
+display: flex;
+flex-direction: column;
+gap: 0.8rem;
+
+}
+
+.comment-container{
+  display: flex;
+  /* border: 1px solid; */
+  border-radius: 1rem;
+  width: 95%;
+ 
+  box-shadow: #282c34 0px 0px 2px 1px;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  height: fit-content;
+}
+
+.colorZone{
+  width: 3rem;
+  border-radius:50% ;
+  margin: 0.2rem 0.8rem;
+  -webkit-border-radius:50% ;
+  -moz-border-radius:50% ;
+  -ms-border-radius:50% ;
+  -o-border-radius:50% ;
+}
+
+.commTitle{
+  text-align: center;
+}
+
+.commentText{
+  margin-left: 0rem;
+  text-wrap: wrap;
+  text-align: left;
+  width: 95%;
+   max-width: 80%;
+  
+}
+
+@media (max-width: 1025px) {
+  .imageContainer{
+    height: 10rem;
+    width: 10rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .items-container{
+    width: 25rem;
+  }
+  .textForm{
+    width: 23rem;
+  }
+
+  .form-btn{
+    width: 5rem;
+    font-size: 13px;
+  }
+  .main{
+    gap: 1rem;
+  }
+  .commentsContainer{
+    width: 20rem;
+  }
+
+  .commentForm{
+    gap: 0.5rem;
   }
 }
